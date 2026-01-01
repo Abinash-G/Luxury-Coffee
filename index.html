@@ -34,14 +34,14 @@
                 <img src="assets/logo.svg" alt="">
             </a>
 
-            <div class="d-flex align-items-center gap-3 order-1 order-lg-2">
+            <div class="d-flex align-items-center gap-3 order-1 order-lg-2 ms-auto">
 
                 <!-- Search Icon -->
                 <button class="icon-btn" title="Search" onclick="openSearch()"><i
                         class="fa-solid fa-magnifying-glass"></i></button>
 
                 <!-- Avatar Dropdown -->
-                <div class="dropdown d-inline-block">
+                <div class="dropdown d-none d-lg-inline-block">
                     <button class="icon-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa-duotone fa-solid fa-user"></i>
                     </button>
@@ -52,8 +52,8 @@
                 </div>
 
                 <!-- Cart Icon -->
-                <button class="icon-btn position-relative" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#cartSidebar" aria-controls="offcanvasRight">
+                <button id="cart-trigger-btn" class="icon-btn position-relative d-none" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#cartSidebar" aria-controls="offcanvasRight">
                     <i class="fa-solid fa-cart-shopping"></i>
                     <span id="cart-badge"
                         class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
@@ -700,10 +700,17 @@
             }
 
             function updateCartUI() {
-                // Update Badge
+                // Update Badge & Visibility
                 const totalCount = cart.reduce((acc, item) => acc + item.quantity, 0);
                 cartBadge.innerText = totalCount;
                 cartBadge.style.display = totalCount > 0 ? 'inline-block' : 'none';
+
+                const cartBtn = document.getElementById('cart-trigger-btn');
+                if (totalCount > 0) {
+                    cartBtn.classList.remove('d-none');
+                } else {
+                    cartBtn.classList.add('d-none');
+                }
 
                 // Update Sidebar List
                 cartItemsContainer.innerHTML = '';
