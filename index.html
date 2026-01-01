@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Brown - The Essence of Fine Coffee</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid px-3 px-lg-5">
+            <!-- Toggler: Mobile Only, Order 0 -->
+            <button class="navbar-toggler order-0 border-0 p-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <span class="fs-1"><i class="fa-solid fa-bars text-secondary"></i></span>
+            </button>
+
+            <!-- Brand: Absolute Center, independent of order -->
+            <a class="navbar-brand position-absolute start-50 translate-middle-x" href="#">
+                <img src="assets/logo.svg" alt="">
+            </a>
+
+            <div class="d-flex align-items-center gap-3 order-1 order-lg-2">
+
+                <!-- Search Icon -->
+                <button class="icon-btn" title="Search" onclick="openSearch()"><i
+                        class="fa-solid fa-magnifying-glass"></i></button>
+
+                <!-- Avatar Dropdown -->
+                <div class="dropdown d-inline-block">
+                    <button class="icon-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-duotone fa-solid fa-user"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end mt-2 animate slideIn">
+                        <li><a class="dropdown-item" href="#">Login</a></li>
+                        <li><a class="dropdown-item" href="#">Create Account</a></li>
+                    </ul>
+                </div>
+
+                <!-- Cart Icon -->
+                <button class="icon-btn position-relative" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#cartSidebar" aria-controls="offcanvasRight">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-badge"
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                        style="font-size: 0.6rem; display: none;">
+                        0
+                    </span>
+                </button>
+            </div>
+
+            <!-- Collapse Menu: Order 2 on mobile (bottom), Order 0 on desktop (left) -->
+            <div class="collapse navbar-collapse order-2 order-lg-0 mt-3 mt-lg-0" id="navbarNav">
+                <ul class="navbar-nav gap-3 me-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section d-flex align-items-center">
+        <div class="container-fluid p-0 px-md-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-left position-relative px-5 px-md-5">
+                    <small class="text-uppercase letter-spacing-2 mb-3 d-block text-white-50">Est. 1924 | Italian
+                        Heritage</small>
+                    <h1 class="hero-title">
+                        Savor the <br>
+                        Essence of <br>
+                        Luxury
+                    </h1>
+                    <p class="hero-desc">Indulge in an exquisite collection of rare, single-origin
+                        blends. <br> Crafted
+                        for the discerning connoisseur.</p>
+                    <a href="#collection" class="btn-shop">Discover the Collection <i
+                            class="fa-solid fa-arrow-right ms-2"></i></a>
+
+                    <!-- Leaf Overlay -->
+                    <img src="assets/leaf_overlay.svg" alt="Leaf Decoration" class="leaf-overlay">
+
+                    <!-- Coffee Line Art -->
+                    <img src="assets/coffee_art.svg" alt="Coffee Art" class="coffee-illustration">
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.pexels.com/photos/27911165/pexels-photo-27911165/free-photo-of-coffee-aesthetic.jpeg"
+                        alt="Cozy Interior" class="img-fluid main-hero-image shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Section -->
+    <section class="pt-0" id="collection">
+        <div class="container">
+            <h2 class="section-title">Curated Masterpieces</h2>
+            <div class="row g-4">
+                <!-- item 1 -->
+                <div class="col-md-4">
+                    <div class="card card-custom">
+                        <div class="card-img-top overflow-hidden">
+                            <img src="assets/pastry_croissant.png" class="card-img-top" alt="Croissant">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Golden Almond Croissant</h5>
+                            <p class="card-text">Flaky layers infused with marzipan, topped with toasted almonds.</p>
+                            <span class="price">$12.00 <i class="fa-solid fa-tag ms-2 opacity-50 fs-6"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- item 2 -->
+                <div class="col-md-4">
+                    <div class="card card-custom overflow-hidden">
+                        <div class="card-img-top overflow-hidden">
+                            <img src="assets/coffee_latte.png" class="card-img-top" alt="Latte Art">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Velvet Truffle Latte</h5>
+                            <p class="card-text">Our signature espresso blended with 70% dark chocolate and truffle
+                                essence.</p>
+                            <span class="price">$18.50 <i class="fa-solid fa-tag ms-2 opacity-50 fs-6"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- item 3 -->
+                <div class="col-md-4">
+                    <div class="card card-custom overflow-hidden">
+                        <div class="card-img-top overflow-hidden">
+                            <img src="assets/cafe_interior.png" class="card-img-top" alt="Atmosphere">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Private Tasting Room</h5>
+                            <p class="card-text">Book an exclusive session with our master barista.</p>
+                            <span class="price">By Request <i
+                                    class="fa-regular fa-calendar-check ms-2 opacity-50 fs-6"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="">
+        <div class="container py-0">
+            <h2 class="section-title">Menu</h2>
+            <div class="row g-4">
+                <!-- Item 1: cappuccino -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card card-custom h-100">
+                        <div class="card-img-top overflow-hidden" style="height: 250px;">
+                            <img src="https://guentercoffee.com/cdn/shop/articles/anleitung-cappuccino-blogheader.jpg?v=1758119315&width=1440"
+                                class="w-100 h-100 object-fit-cover bg-secondary bg-opacity-25" alt="cappuccino">
+                        </div>
+                        <div class="card-body text-center d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="card-title text-gold mb-1 text-lowercase">cappuccino</h5>
+                            </div>
+                            <div
+                                class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top border-secondary border-opacity-25 w-100">
+                                <div>
+                                    <span class="text-gold fs-5">$5.00</span>
+                                    <small class="text-decoration-line-through text-white-50 ms-2">$8.00</small>
+                                </div>
+                                <button class="icon-btn text-gold">
+                                    <i class="fa-solid fa-cart-shopping fs-5"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 2: Vanilla bean -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card card-custom h-100">
+                        <div class="card-img-top overflow-hidden" style="height: 250px;">
+                            <img src="https://thefoodiebunch.sfo3.digitaloceanspaces.com/wp-content/uploads/2025/09/08010137/Classic-Vanilla-Bean-Milkshake2-scaled.png"
+                                class="w-100 h-100 object-fit-cover bg-secondary bg-opacity-25" alt="Vanilla bean">
+                        </div>
+                        <div class="card-body text-center d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="card-title text-gold mb-1 pacifico-regular">Vanilla bean</h5>
+                            </div>
+                            <div
+                                class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top border-secondary border-opacity-25 w-100">
+                                <div>
+                                    <span class="text-gold fs-5">$2.00</span>
+                                    <small class="text-decoration-line-through text-white-50 ms-2">$3.00</small>
+                                </div>
+                                <button class="icon-btn text-gold"><i
+                                        class="fa-solid fa-cart-shopping fs-5"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 3: Mocha -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card card-custom h-100">
+                        <div class="card-img-top overflow-hidden" style="height: 250px;">
+                            <img src="https://theteaplanet.com/cdn/shop/files/20250716_1853_Mocha_Boba_Delight_simple_compose_01k09pcydnfh7tnh9z1cdds9kw.png?v=1752828873&width=1024"
+                                class="w-100 h-100 object-fit-cover bg-secondary bg-opacity-25" alt="Mocha">
+                        </div>
+                        <div class="card-body text-center d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="card-title text-gold mb-1">Mocha</h5>
+                            </div>
+                            <div
+                                class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top border-secondary border-opacity-25 w-100">
+                                <div>
+                                    <span class="text-gold fs-5">$3.00</span>
+                                    <small class="text-decoration-line-through text-white-50 ms-2">$4.00</small>
+                                </div>
+                                <button class="icon-btn text-gold"><i
+                                        class="fa-solid fa-cart-shopping fs-5"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 4: espressso -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card card-custom h-100">
+                        <div class="card-img-top overflow-hidden" style="height: 250px;">
+                            <img src="https://media-cdn.tripadvisor.com/media/photo-m/1280/2f/8b/08/11/caption.jpg"
+                                class="w-100 h-100 object-fit-cover bg-secondary bg-opacity-25" alt="espressso">
+                        </div>
+                        <div class="card-body text-center d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="card-title text-gold mb-1 text-lowercase">espressso</h5>
+                            </div>
+                            <div
+                                class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top border-secondary border-opacity-25 w-100">
+                                <div>
+                                    <span class="text-gold fs-5">$1.50</span>
+                                    <small class="text-decoration-line-through text-white-50 ms-2">$2.00</small>
+                                </div>
+                                <button class="icon-btn text-gold"><i
+                                        class="fa-solid fa-cart-shopping fs-5"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 5: muffins -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card card-custom h-100">
+                        <div class="card-img-top overflow-hidden" style="height: 250px;">
+                            <img src="https://ashfordcatering.co.uk/wp-content/uploads/2025/08/Luxury-Muffin-Platter.png"
+                                class="w-100 h-100 object-fit-cover bg-secondary bg-opacity-25" alt="muffins">
+                        </div>
+                        <div class="card-body text-center d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="card-title text-gold mb-1 text-lowercase">muffins</h5>
+                            </div>
+                            <div
+                                class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top border-secondary border-opacity-25 w-100">
+                                <div>
+                                    <span class="text-gold fs-5">$2.50</span>
+                                    <small class="text-decoration-line-through text-white-50 ms-2">$3.00</small>
+                                </div>
+                                <button class="icon-btn text-gold"><i
+                                        class="fa-solid fa-cart-shopping fs-5"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 6: cold brew -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card card-custom h-100">
+                        <div class="card-img-top overflow-hidden" style="height: 250px;">
+                            <img src="https://m.media-amazon.com/images/I/616N-Uoo2hL.jpg"
+                                class="w-100 h-100 object-fit-cover bg-secondary bg-opacity-25" alt="cold brew">
+                        </div>
+                        <div class="card-body text-center d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="card-title text-gold mb-1 text-lowercase">cold brew</h5>
+                            </div>
+                            <div
+                                class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top border-secondary border-opacity-25 w-100">
+                                <div>
+                                    <span class="text-gold fs-5">$1.80</span>
+                                    <small class="text-decoration-line-through text-white-50 ms-2">$2.00</small>
+                                </div>
+                                <button class="icon-btn text-gold"><i
+                                        class="fa-solid fa-cart-shopping fs-5"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 7: caramel Macchiato -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card card-custom h-100">
+                        <div class="card-img-top overflow-hidden" style="height: 250px;">
+                            <img src="https://cdn.salla.sa/DPYKd/eYprsKDSKPtwr7m8RwVmlj28PNj0oNwXO58WXUrZ.png"
+                                class="w-100 h-100 object-fit-cover bg-secondary bg-opacity-25" alt="caramel Macchiato">
+                        </div>
+                        <div class="card-body text-center d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="card-title text-gold mb-1">caramel Macchiato</h5>
+                            </div>
+                            <div
+                                class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top border-secondary border-opacity-25 w-100">
+                                <div>
+                                    <span class="text-gold fs-5">$2.50</span>
+                                    <small class="text-decoration-line-through text-white-50 ms-2">$3.00</small>
+                                </div>
+                                <button class="icon-btn text-gold"><i
+                                        class="fa-solid fa-cart-shopping fs-5"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 8: chocolate muffins -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card card-custom h-100">
+                        <div class="card-img-top overflow-hidden" style="height: 250px;">
+                            <img src="https://img.freepik.com/free-photo/front-view-sweet-bakery-assortment_23-2148654064.jpg?semt=ais_hybrid&w=740&q=80"
+                                class="w-100 h-100 object-fit-cover bg-secondary bg-opacity-25" alt="chocolate muffins">
+                        </div>
+                        <div class="card-body text-center d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="card-title text-gold mb-1 text-lowercase">chocolate muffins</h5>
+                            </div>
+                            <div
+                                class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top border-secondary border-opacity-25 w-100">
+                                <div>
+                                    <span class="text-gold fs-5">$1.50</span>
+                                    <small class="text-decoration-line-through text-white-50 ms-2">$2.00</small>
+                                </div>
+                                <button class="icon-btn text-gold"><i
+                                        class="fa-solid fa-cart-shopping fs-5"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="">
+        <div class="container py-0">
+            <h2 class="section-title">Our Products</h2>
+            <div class="row g-4">
+                <!-- Item 1: cappuccino -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card card-custom h-100">
+                        <div class="card-img-top overflow-hidden" style="height: 350px;">
+                            <img src="https://rigidboxes.in/wp-content/uploads/2024/09/custom-tea-box-packaging-1024x585.jpg"
+                                class="w-100 h-100 object-fit-cover bg-secondary bg-opacity-25" alt="cappuccino">
+                        </div>
+                        <div class="card-body text-center d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="card-title text-gold mb-1">Stem Tea</h5>
+                            </div>
+                            <div
+                                class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top border-secondary border-opacity-25 w-100">
+                                <div>
+                                    <span class="text-gold fs-5">$5.00</span>
+                                    <small class="text-decoration-line-through text-white-50 ms-2">$8.00</small>
+                                </div>
+                                <button class="icon-btn text-gold"><i
+                                        class="fa-solid fa-cart-shopping fs-5"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 2: Vanilla bean -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card card-custom h-100">
+                        <div class="card-img-top overflow-hidden" style="height: 350px;">
+                            <img src="https://5.imimg.com/data5/ANDROID/Default/2025/7/528589613/MJ/YF/CQ/95399164/product-jpeg-500x500.jpg"
+                                class="w-100 h-100 object-fit-cover bg-secondary bg-opacity-25" alt="Vanilla bean">
+                        </div>
+                        <div class="card-body text-center d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="card-title text-gold mb-1">Green Tea</h5>
+                            </div>
+                            <div
+                                class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top border-secondary border-opacity-25 w-100">
+                                <div>
+                                    <span class="text-gold fs-5">$2.00</span>
+                                    <small class="text-decoration-line-through text-white-50 ms-2">$3.00</small>
+                                </div>
+                                <button class="icon-btn text-gold"><i
+                                        class="fa-solid fa-cart-shopping fs-5"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 3: Mocha -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card card-custom h-100">
+                        <div class="card-img-top overflow-hidden" style="height: 350px;">
+                            <img src="https://cdn.shopify.com/s/files/1/0114/9383/4811/files/Presto-Lifestyle-Stills-71_480x480.JPG?v=1609955966"
+                                class="w-100 h-100 object-fit-cover bg-secondary bg-opacity-25" alt="Max Tea">
+                        </div>
+                        <div class="card-body text-center d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="card-title text-gold mb-1">Presto</h5>
+                            </div>
+                            <div
+                                class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top border-secondary border-opacity-25 w-100">
+                                <div>
+                                    <span class="text-gold fs-5">$3.00</span>
+                                    <small class="text-decoration-line-through text-white-50 ms-2">$4.00</small>
+                                </div>
+                                <button class="icon-btn text-gold"><i
+                                        class="fa-solid fa-cart-shopping fs-5"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 4: espressso -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card card-custom h-100">
+                        <div class="card-img-top overflow-hidden" style="height: 350px;">
+                            <img src="https://5.imimg.com/data5/SELLER/Default/2024/6/431141057/MU/AW/VB/4161924/coffee-pouch.jpeg"
+                                class="w-100 h-100 object-fit-cover bg-secondary bg-opacity-25" alt="espressso">
+                        </div>
+                        <div class="card-body text-center d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="card-title text-gold mb-1">Coffee Seeds</h5>
+                            </div>
+                            <div
+                                class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top border-secondary border-opacity-25 w-100">
+                                <div>
+                                    <span class="text-gold fs-5">$1.50</span>
+                                    <small class="text-decoration-line-through text-white-50 ms-2">$2.00</small>
+                                </div>
+                                <button class="icon-btn text-gold"><i
+                                        class="fa-solid fa-cart-shopping fs-5"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-opacity-10 bg-black">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="assets/cafe_interior.png" alt="Our Cafe" class="about-img shadow">
+                </div>
+                <div class="col-lg-6 ps-lg-5">
+                    <h2 class="display-4 serif mb-4" style="font-family: 'Playfair Display', serif;">A Legacy of
+                        Elegance</h2>
+                    <p class="lead mb-4 pacifico-regular">Coffee is not merely a beverage; it is an art form. We
+                        traverse the globe to
+                        source beans of unparalleled quality, roasting them to perfection to unlock their hidden
+                        symphonies.</p>
+                    <p>Our lounges offer an atmosphere of refined tranquility, where every detail is curated for your
+                        pleasure. Welcome to the pinnacle of coffee culture.</p>
+                    <a href="#" class="btn-shop mt-3">Explore Our Heritage <i
+                            class="fa-solid fa-book-open ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-5">
+        <div class="container text-center">
+            <h2 class="section-title mb-5">The Art of the Roast</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="p-4">
+                        <div class="display-4 text-gold mb-3"><i class="fa-solid fa-leaf"></i></div>
+                        <h4 class="mb-3">Sourcing</h4>
+                        <p class="text-white-50">We travel to remote elevations to hand-select the top 1% of Arabica
+                            beans.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4">
+                        <div class="display-4 text-gold mb-3"><i class="fa-solid fa-fire-burner"></i></div>
+                        <h4 class="mb-3">Roasting</h4>
+                        <p class="text-white-50">Small-batch artisan roasting that highlights the unique notes of each
+                            origin.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4">
+                        <div class="display-4 text-gold mb-3"><i class="fa-solid fa-mug-hot"></i></div>
+                        <h4 class="mb-3">Brewing</h4>
+                        <p class="text-white-50">Precision brewing methods that ensure the perfect cup, every single
+                            time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="bg-black bg-opacity-25">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Voices of Connoisseurs</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card card-custom p-4 border-0">
+                        <div class="card-body">
+                            <div class="mb-3 text-gold">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="fst-italic text-white-50">"The Velvet Truffle Latte is unlike anything I've ever
+                                tasted. It's not just coffee; it's a transcendent experience."</p>
+                            <h6 class="mt-4 mb-0 text-gold">- Julian V., Food Critic</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card card-custom p-4 border-0">
+                        <div class="card-body">
+                            <div class="mb-3 text-gold">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="fst-italic text-white-50">"Luxury Brown has redefined my morning ritual. The
+                                atmosphere, the aroma, the taste—everything is impeccable."</p>
+                            <h6 class="mt-4 mb-0 text-gold">- Elena R., Architect</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <img src="./assets/logo.svg" alt="Logo"
+                        style="height: 50px; filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));" class="mb-3">
+                    <span class="footer-brand-text">Luxury Brown</span>
+                    <p class="text-white-50">Elevating the daily ritual into an extraordinary experience.</p>
+                    <div class="d-flex gap-3 text-white-50 mt-3">
+                        <i class="fa-brands fa-instagram fs-5 cursor-pointer"></i>
+                        <i class="fa-brands fa-twitter fs-5 cursor-pointer"></i>
+                        <i class="fa-brands fa-facebook fs-5 cursor-pointer"></i>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5 class="text-white mb-3">Shop</h5>
+                    <a href="#" class="footer-link">Rare Beans</a>
+                    <a href="#" class="footer-link">Artisanal Pastry</a>
+                    <a href="#" class="footer-link">Gifts & Sets</a>
+                    <a href="#" class="footer-link">Subscriptions</a>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5 class="text-white mb-3">About</h5>
+                    <a href="#" class="footer-link">The Heritage</a>
+                    <a href="#" class="footer-link">Master Baristas</a>
+                    <a href="#" class="footer-link">Concierge</a>
+                    <a href="#" class="footer-link">Locations</a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="fst-italic fw-bold mb-4"
+                        style="font-family: 'Playfair Display', serif; font-size: 2rem;">Stay Updated</h5>
+                    <form class="d-flex gap-3 align-items-stretch">
+                        <div class="input-group d-flex align-items-center"
+                            style="border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; padding: 5px;">
+                            <span
+                                class="input-group-text bg-transparent text-white d-flex align-items-center justify-content-center"
+                                style="border: 1px solid rgba(255,255,255,0.2); border-radius: 6px; width: 45px; height: 45px;"><i
+                                    class="fa-solid fa-envelope"></i></span>
+                            <input type="email"
+                                class="form-control bg-transparent text-white border-0 shadow-none ps-3 h-100"
+                                placeholder="Your email address" style="font-size: 1rem;">
+                        </div>
+                        <button class="btn border border-white text-white px-4 rounded-3 bg-transparent"
+                            style="font-size: 1rem;">Join</button>
+                    </form>
+                </div>
+            </div>
+            <div class="text-center text-white-50 mt-5 pt-4 border-top border-secondary">
+                <small>© 2025 Luxury Brown Coffee. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Background Decorations -->
+    <div class="bg-decorations">
+        <img src="assets/leaf_overlay.svg" class="leaf-deco leaf-1" alt="">
+        <img src="assets/leaf_overlay.svg" class="leaf-deco leaf-2" alt="">
+        <img src="assets/leaf_overlay.svg" class="leaf-deco leaf-3" alt="">
+        <img src="assets/leaf_overlay.svg" class="leaf-deco leaf-4" alt="">
+        <img src="assets/leaf_overlay.svg" class="leaf-deco leaf-5" alt="">
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="cartSidebar" aria-labelledby="cartSidebarLabel"
+        style="background-color: var(--card-bg) !important;">
+        <div class="offcanvas-header border-bottom border-secondary">
+            <h5 class="offcanvas-title text-gold" id="cartSidebarLabel" style="font-family: 'Playfair Display', serif;">
+                Your Cart</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div id="cart-items" class="d-flex flex-column gap-3">
+                <!-- Cart items will be injected here JS -->
+                <div class="text-center text-white-50 mt-5 empty-msg">Your cart is empty</div>
+            </div>
+        </div>
+        <div class="offcanvas-footer p-3 border-top border-secondary">
+            <div class="d-flex justify-content-between mb-3">
+                <span class="h5 text-gold">Total</span>
+                <span class="h5 text-gold" id="cart-total">$0.00</span>
+            </div>
+            <button class="btn btn-shop w-100">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Search Overlay -->
+    <div id="search-overlay"
+        class="d-none position-fixed top-0 start-0 w-100 h-100 bg-black bg-opacity-95 z-3 d-flex justify-content-center align-items-center flex-column search-overlay"
+        style="z-index: 2000 !important;">
+        <button class="position-absolute top-0 end-0 btn text-white fs-1 m-4" onclick="closeSearch()">&times;</button>
+        <div class="position-relative w-75" style="max-width: 600px;">
+            <input type="text" id="search-input"
+                class="form-control bg-transparent border-bottom border-0 border-secondary text-center text-white display-4"
+                placeholder="Search..." style="box-shadow: none; font-family: 'Playfair Display', serif;">
+            <div id="search-results" class="mt-4 w-100 text-start" style="max-height: 50vh; overflow-y: auto;">
+                <!-- Results injected here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Cart Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cartItemsContainer = document.getElementById('cart-items');
+            const cartTotalEl = document.getElementById('cart-total');
+            const cartBadge = document.getElementById('cart-badge');
+            let cart = [];
+
+            // Select all add to cart buttons
+            const addToCartBtns = document.querySelectorAll('.card-custom .fa-cart-shopping');
+
+            addToCartBtns.forEach(icon => {
+                // The button element is the parent of the icon
+                const btn = icon.closest('button');
+
+                btn.addEventListener('click', () => {
+                    const card = btn.closest('.card-custom');
+                    const title = card.querySelector('.card-title').innerText;
+                    const priceText = card.querySelector('.fs-5').innerText; // e.g., "$5.00"
+                    const price = parseFloat(priceText.replace('$', ''));
+                    const imgSrc = card.querySelector('img').src;
+
+                    addToCart(title, price, imgSrc);
+                });
+            });
+
+            function addToCart(title, price, image) {
+                // Check if item already exists
+                const existingItem = cart.find(item => item.title === title);
+
+                if (existingItem) {
+                    existingItem.quantity += 1;
+                } else {
+                    cart.push({
+                        title: title,
+                        price: price,
+                        image: image,
+                        quantity: 1
+                    });
+                }
+
+                updateCartUI();
+
+                // Show feedback (optional bubble or pulse)
+                // Open sidebar optionally? keeping it closed for now so they can keep shopping
+            }
+
+            function removeFromCart(title) {
+                cart = cart.filter(item => item.title !== title);
+                updateCartUI();
+            }
+
+            function updateCartUI() {
+                // Update Badge
+                const totalCount = cart.reduce((acc, item) => acc + item.quantity, 0);
+                cartBadge.innerText = totalCount;
+                cartBadge.style.display = totalCount > 0 ? 'inline-block' : 'none';
+
+                // Update Sidebar List
+                cartItemsContainer.innerHTML = '';
+                let totalPrice = 0;
+
+                if (cart.length === 0) {
+                    cartItemsContainer.innerHTML = '<div class="text-center text-white-50 mt-5 empty-msg">Your cart is empty</div>';
+                } else {
+                    cart.forEach(item => {
+                        totalPrice += item.price * item.quantity;
+
+                        const itemEl = document.createElement('div');
+                        itemEl.classList.add('d-flex', 'align-items-center', 'gap-3', 'bg-black', 'bg-opacity-25', 'p-2', 'rounded');
+                        itemEl.innerHTML = `
+                            <img src="${item.image}" alt="${item.title}" class="rounded" style="width: 50px; height: 50px; object-fit: cover;">
+                            <div class="flex-grow-1">
+                                <h6 class="mb-0 text-gold" style="font-size: 0.9rem;">${item.title}</h6>
+                                <small class="text-white-50">$${item.price.toFixed(2)} x ${item.quantity}</small>
+                            </div>
+                            <button class="btn btn-sm text-white-50 hover-danger remove-btn" data-title="${item.title}"><i class="fa-solid fa-trash"></i></button>
+                        `;
+                        cartItemsContainer.appendChild(itemEl);
+                    });
+                }
+
+                // Attach remove listeners
+                document.querySelectorAll('.remove-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const title = e.currentTarget.getAttribute('data-title');
+                        removeFromCart(title);
+                    });
+                });
+
+                // Update Total
+                cartTotalEl.innerText = '$' + totalPrice.toFixed(2);
+            }
+        });
+
+        // Search Logic
+        const searchOverlay = document.getElementById('search-overlay');
+        const searchInput = document.getElementById('search-input');
+        const searchResults = document.getElementById('search-results');
+        let searchableItems = [];
+
+        function openSearch() {
+            searchOverlay.classList.remove('d-none');
+            searchInput.focus();
+            // Index items
+            searchableItems = [];
+            document.querySelectorAll('.card-custom').forEach(card => {
+                const titleEl = card.querySelector('.card-title');
+                if (titleEl) {
+                    searchableItems.push({
+                        title: titleEl.innerText,
+                        element: card
+                    });
+                }
+            });
+        }
+
+        function closeSearch() {
+            searchOverlay.classList.add('d-none');
+            searchInput.value = '';
+            searchResults.innerHTML = '';
+        }
+
+        searchInput.addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            searchResults.innerHTML = '';
+
+            if (term.length < 1) return;
+
+            const filtered = searchableItems.filter(item => item.title.toLowerCase().includes(term));
+
+            if (filtered.length === 0) {
+                searchResults.innerHTML = '<div class="text-white-50 text-center">No results found</div>';
+            } else {
+                filtered.forEach(item => {
+                    const div = document.createElement('div');
+                    div.className = 'search-result-item p-3 text-gold';
+                    div.innerHTML = `<i class="fa-solid fa-mug-hot me-3 opacity-50"></i> ${item.title}`;
+                    div.addEventListener('click', () => {
+                        closeSearch();
+                        item.element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        // Add highlight effect
+                        item.element.style.transition = 'box-shadow 0.5s';
+                        item.element.style.boxShadow = '0 0 20px rgba(230, 220, 200, 0.5)';
+                        setTimeout(() => {
+                            item.element.style.boxShadow = 'none';
+                        }, 1000);
+                    });
+                    searchResults.appendChild(div);
+                });
+            }
+        });
+
+        // Close search on escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeSearch();
+        });
+    </script>
+</body>
+
+</html>
